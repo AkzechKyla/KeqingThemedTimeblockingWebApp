@@ -1,11 +1,3 @@
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        generateSchedule(data);
-        setInterval(updateIndicator, 60000); // Update the indicator every minute
-    })
-    .catch(error => console.error('Error loading the data:', error));
-
 function formatTime(hour) {
     return moment().startOf('day').add(moment.duration(hour, 'h')).format('h:mm A');
 }
@@ -33,10 +25,10 @@ function generateSchedule(data) {
         currentHour += block.hours;
     });
 
-    updateIndicator();
+    updateIndicator(data);
 }
 
-function updateIndicator() {
+function updateIndicator(data) {
     const now = moment();
     const currentHour = now.hour() + now.minute() / 60;
     const scheduleContainer = document.getElementById('schedule');
@@ -64,5 +56,12 @@ function updateIndicator() {
     indicator.style.transform = `translateY(${indicatorPosition + 10}px)`;
 }
 
-generateSchedule(data);
-setInterval(updateIndicator, 60000); // Update the indicator every minute
+async function main() {
+    const response = await fetch('data.json');
+    const data = await response.json();
+
+    generateSchedule(data);
+    setInterval(updateIndicator, 60000); // Update the indicator every minute
+}
+
+main();
