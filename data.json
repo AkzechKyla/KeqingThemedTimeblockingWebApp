@@ -1,0 +1,37 @@
+{
+    "start": 8,
+    "blocks": [
+        {
+            "text": "Morning Exercise",
+            "hours": 1
+        },
+        {
+            "text": "Breakfast",
+            "hours": 0.5
+        },
+        {
+            "text": "Work on Project",
+            "hours": 3
+        },
+        {
+            "text": "Lunch Break",
+            "hours": 1
+        },
+        {
+            "text": "Study Session",
+            "hours": 2
+        },
+        {
+            "text": "Afternoon Walk",
+            "hours": 1
+        },
+        {
+            "text": "Dinner",
+            "hours": 1
+        },
+        {
+            "text": "Relax/Free Time",
+            "hours": 2
+        }
+    ]
+}
