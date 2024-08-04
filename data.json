@@ -1,36 +1,28 @@
 {
-    "start": 8,
+    "start": 9,
     "blocks": [
         {
-            "text": "Morning Exercise",
-            "hours": 1
-        },
-        {
-            "text": "Breakfast",
-            "hours": 0.5
-        },
-        {
-            "text": "Work on Project",
+            "text": "🌄 Morning",
             "hours": 3
         },
         {
-            "text": "Lunch Break",
-            "hours": 1
-        },
-        {
-            "text": "Study Session",
+            "text": "📋 Tasks",
             "hours": 2
         },
         {
-            "text": "Afternoon Walk",
+            "text": "☀️ Afternoon",
             "hours": 1
         },
         {
-            "text": "Dinner",
-            "hours": 1
+            "text": "💻 Work",
+            "hours": 5
         },
         {
-            "text": "Relax/Free Time",
+            "text": "🌙 Evening",
+            "hours": 2
+        },
+        {
+            "text": "💬 Japanese study",
             "hours": 2
         }
     ]
