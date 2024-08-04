@@ -3,27 +3,33 @@
     "blocks": [
         {
             "text": "🌄 Morning",
-            "hours": 3
+            "hours": 3,
+            "backgroundImage": "img/keqing-morning.png"
         },
         {
             "text": "📋 Tasks",
-            "hours": 2
+            "hours": 2,
+            "backgroundImage": ""
         },
         {
             "text": "☀️ Afternoon",
-            "hours": 1
+            "hours": 1,
+            "backgroundImage": ""
         },
         {
             "text": "💻 Work",
-            "hours": 5
+            "hours": 5,
+            "backgroundImage": ""
         },
         {
             "text": "🌙 Evening",
-            "hours": 2
+            "hours": 2,
+            "backgroundImage": ""
         },
         {
             "text": "💬 Japanese study",
-            "hours": 2
+            "hours": 2,
+            "backgroundImage": ""
         }
     ]
 }
