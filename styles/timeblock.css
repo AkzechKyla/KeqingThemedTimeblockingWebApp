@@ -4,7 +4,7 @@
     position: relative;
     max-width: 900px;
     /* margin: 0 auto; */
-    padding: 10px;
+    padding: 20px 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,8 +17,9 @@
     padding-right: 10px;
     position: absolute;
     z-index: 1;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 20px 10px;
+    /* margin-top: 5px; */
+    margin-left: 5px;
 }
 
 .hour {
@@ -34,7 +35,6 @@
 .block {
     padding: 10px;
     margin-left: 100px;
-    margin-bottom: 3px;
     border-radius: 10px;
     height: auto; /* Dynamic height */
     box-sizing: border-box;
@@ -84,8 +84,4 @@
 
 .container {
     position: relative;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
