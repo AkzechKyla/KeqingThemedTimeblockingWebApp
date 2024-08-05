@@ -1,12 +1,14 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-image: url('../img/Pastel-Purple-Ombre-Background.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     overflow: hidden;
+    padding-top: 80px;
 }
 
 h1 {

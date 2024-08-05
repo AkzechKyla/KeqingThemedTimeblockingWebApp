@@ -1,0 +1,13 @@
+.header {
+    background-color: #DDC7F8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    z-index: 100;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    border-top-color: #F3EFFD;
+    border-bottom-color: #F3EFFD;
+}
