@@ -18,6 +18,7 @@
     position: absolute;
     z-index: 1;
     padding: 10px;
+    margin-top: 5px;
 }
 
 .hour {
@@ -33,6 +34,7 @@
 .block {
     padding: 10px;
     margin-left: 100px;
+    margin-bottom: 3px;
     border-radius: 10px;
     height: auto; /* Dynamic height */
     box-sizing: border-box;
