@@ -2,6 +2,30 @@ function formatTime(hour) {
     return moment().startOf('day').add(moment.duration(hour, 'h')).format('h:mm A');
 }
 
+function countTotalHours(hourData) {
+    let totalHours = 0;
+
+    hourData.blocks.forEach(block => {
+        totalHours += block.hours;
+    });
+
+    return totalHours;
+}
+
+function generateHourIndicators(data) {
+    const hourIndicatorsContainer = document.getElementById('hour-indicators');
+    let currentHour = data.start;
+    let totalHours = countTotalHours(data);
+
+    for (let i = 0; i <= totalHours; i++) {
+        const hourElement = document.createElement('div');
+        hourElement.className = 'hour';
+        hourElement.innerHTML = `${formatTime(currentHour)}`;
+        hourIndicatorsContainer.appendChild(hourElement);
+        currentHour++;
+    }
+}
+
 function generateSchedule(data) {
     const scheduleContainer = document.getElementById('schedule');
     const startHour = data.start;
@@ -60,6 +84,7 @@ async function main() {
     const response = await fetch('data.json');
     const data = await response.json();
 
+    generateHourIndicators(data);
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
 }
