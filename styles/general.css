@@ -8,7 +8,8 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 70px;
+    display: flex;
 }
 
 h1 {
