@@ -3,9 +3,10 @@
     flex-direction: column;
     position: relative;
     max-width: 900px;
-    /* margin: 0 auto; */
     padding: 20px 10px;
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hour-indicators {
@@ -69,11 +70,12 @@
 
 .indicator {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 10px);
     height: 3px;
     background-color: #ff26a1;
     top: 0;
     left: 0;
+    right: 10px;
     transform: translateY(0);
     transition: transform 0.5s ease;
     border-radius: 2px;
@@ -82,8 +84,8 @@
 
 .container {
     position: relative;
+    width: 900px;
     max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    padding-right: 10px;
 }
