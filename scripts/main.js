@@ -80,6 +80,25 @@ function updateIndicator(data) {
     indicator.style.transform = `translateY(${indicatorPosition + 10}px)`;
 }
 
+async function playKeqingPedro() {
+    $(document).ready(function() {
+        const ctrlVideo = document.getElementById("pedro-keqing-video");
+
+        $('#play-btn').click(function(){
+          if ($('#play-btn').hasClass("active")){
+                ctrlVideo.play();
+                $('#play-btn').html("Stop");
+                $('#play-btn').toggleClass("active");
+          } else {
+                ctrlVideo.pause();
+                ctrlVideo.currentTime = 0;
+                $('#play-btn').html("Play");
+                $('#play-btn').toggleClass("active");
+            }
+        });
+    });
+}
+
 async function main() {
     const response = await fetch('data.json');
     const data = await response.json();
@@ -87,6 +106,7 @@ async function main() {
     generateHourIndicators(data);
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
+    playKeqingPedro();
 }
 
 main();
