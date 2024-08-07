@@ -1,6 +1,7 @@
 .right-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .upper-container {
@@ -9,6 +10,28 @@
     width: 570px;
     height: 240px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.pedro-keqing {
+    position: relative;
+}
+
+.pedro-keqing-video {
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+}
+
+#play-btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+}
+
+#play-btn.active {
+    background-color: pink;
 }
 
 .lower-container {
