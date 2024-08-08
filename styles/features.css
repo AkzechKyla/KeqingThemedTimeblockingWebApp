@@ -38,12 +38,16 @@
 }
 
 #play-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
     position: absolute;
+    cursor: pointer;
     z-index: 2;
 }
 
 #play-btn.active {
-    background-color: pink;
+
 }
 
 .lower-container {

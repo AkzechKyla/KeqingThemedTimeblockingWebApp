@@ -87,12 +87,12 @@ async function playKeqingPedro() {
         $('#play-btn').click(function(){
           if ($('#play-btn').hasClass("active")){
                 ctrlVideo.play();
-                $('#play-btn').html(`<i id="pause-btn-icon" class="fa-solid fa-pause"></i>`);
+                $('#play-btn').html(`<i id="pause-btn-icon" class="fa-solid fa-pause fa-2x"></i>`);
                 $('#play-btn').toggleClass("active");
           } else {
                 ctrlVideo.pause();
                 ctrlVideo.currentTime = 0;
-                $('#play-btn').html(`<i id="play-btn-icon" class="fa-solid fa-play"></i>`);
+                $('#play-btn').html(`<i id="play-btn-icon" class="fa-solid fa-play fa-2x"></i>`);
                 $('#play-btn').toggleClass("active");
             }
         });
