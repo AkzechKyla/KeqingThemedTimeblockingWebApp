@@ -15,11 +15,15 @@
 
 .pedro-keqing {
     position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .video-container {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -36,8 +40,6 @@
 #play-btn {
     position: absolute;
     z-index: 2;
-    top: 50%;
-    left: 25%;
 }
 
 #play-btn.active {
