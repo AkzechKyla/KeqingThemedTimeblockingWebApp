@@ -107,6 +107,7 @@ async function main() {
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
     playKeqingPedro();
+    clock();
 }
 
 main();

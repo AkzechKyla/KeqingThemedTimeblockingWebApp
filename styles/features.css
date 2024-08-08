@@ -11,6 +11,7 @@
     height: 240px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
 }
 
 .pedro-keqing {
@@ -46,8 +47,49 @@
     z-index: 2;
 }
 
-#play-btn.active {
+.date-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    gap: 10px;
+    padding: 10px 0;
+}
 
+.date-container {
+    background-color: #f7e9fd;
+    border-radius: 10px;
+    height: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.time-container {
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-container ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    color: #303030;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.time-container {
+    background-color: #ead6fc;
 }
 
 .lower-container {
