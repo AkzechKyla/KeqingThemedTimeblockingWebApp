@@ -99,6 +99,15 @@ async function playKeqingPedro() {
     });
 }
 
+async function clock() {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    var today = new Date();
+
+    document.getElementById('date').innerHTML = `${dayNames[today.getDay()]}, ${today.getDate()} ${monthNames[today.getMonth()]} ${today.getFullYear()}`
+}
+
 async function main() {
     const response = await fetch('data.json');
     const data = await response.json();
