@@ -87,16 +87,48 @@ async function playKeqingPedro() {
         $('#play-btn').click(function(){
           if ($('#play-btn').hasClass("active")){
                 ctrlVideo.play();
-                $('#play-btn').html(`<i class="fa-solid fa-pause"></i>`);
+                $('#play-btn').html(`<i id="pause-btn-icon" class="fa-solid fa-pause fa-2x"></i>`);
                 $('#play-btn').toggleClass("active");
           } else {
                 ctrlVideo.pause();
                 ctrlVideo.currentTime = 0;
-                $('#play-btn').html(`<i class="fa-solid fa-play"></i>`);
+                $('#play-btn').html(`<i id="play-btn-icon" class="fa-solid fa-play fa-2x"></i>`);
                 $('#play-btn').toggleClass("active");
             }
         });
     });
+}
+
+async function setDate() {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    let currentDate = new Date();
+
+    document.getElementById('date').innerHTML = `${dayNames[currentDate.getDay()]}, ${currentDate.getDate()} ${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`
+}
+
+async function setTime() {
+    let hours = document.getElementById('hours');
+    let minutes = document.getElementById('minutes');
+    let seconds = document.getElementById('seconds');
+
+    setInterval(function() {
+        let currentTime = new Date();
+
+        let h = currentTime.getHours();
+        let m = currentTime.getMinutes();
+        let s = currentTime.getSeconds();
+
+        // if time is less than 10, add leading zero
+        h = h<10? '0'+h: h;
+        m = m<10? '0'+m: m;
+        s = s<10? '0'+s: s;
+
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+    }, 1000);
 }
 
 async function main() {
@@ -107,6 +139,8 @@ async function main() {
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
     playKeqingPedro();
+    setDate();
+    setTime();
 }
 
 main();
