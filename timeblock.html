@@ -20,7 +20,14 @@
     <div id="right-container" class="right-container">
         <div class="upper-container">
             <div class="pedro-keqing">
-                <video src="media/videos/pedro-keqing.mp4" height="200px" controls></video>
+                <button id="play-btn" class="active">
+                    <i id="play-btn-icon" class="fa-solid fa-play"></i>
+                </button>
+                <div class="video-container">
+                    <video id="pedro-keqing-video" class="pedro-keqing-video" preload="auto" loop>
+                        <source src="media/videos/pedro-keqing.mp4">
+                    </video>
+                </div>
             </div>
             <div class="date-time-container">
                 <div class="date"></div>
@@ -39,6 +46,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/1.3.0/moment-duration-format.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/2d9ebf1f47.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

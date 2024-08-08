@@ -1,6 +1,7 @@
 .right-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .upper-container {
@@ -9,6 +10,38 @@
     width: 570px;
     height: 240px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.pedro-keqing {
+    position: relative;
+}
+
+.video-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.pedro-keqing-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+#play-btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+}
+
+#play-btn.active {
+    background-color: pink;
 }
 
 .lower-container {
