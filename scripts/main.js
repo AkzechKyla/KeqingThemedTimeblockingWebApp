@@ -131,6 +131,21 @@ async function setTime() {
     }, 1000);
 }
 
+async function playVoicelines() {
+    const keqing = document.getElementById('keqing');
+    let voiceline;
+
+    keqing.addEventListener('click', function() {
+        if (voiceline) {
+            voiceline.pause();
+            voiceline.currentTime = 0;
+        }
+
+        voiceline = new Audio('./media/audio/keqing-voiceline1.mp3');
+        voiceline.play();
+    });
+}
+
 async function main() {
     const response = await fetch('data.json');
     const data = await response.json();
@@ -141,6 +156,7 @@ async function main() {
     playKeqingPedro();
     setDate();
     setTime();
+    playVoicelines();
 }
 
 main();
