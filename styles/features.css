@@ -139,4 +139,10 @@
     right: 0;
     bottom: 0;
     height: 450px;
+    cursor: pointer;
+    transition: filter 0.15s;
+}
+
+.keqing:hover {
+    filter: drop-shadow(3px 3px 5px #9c40ec);
 }
