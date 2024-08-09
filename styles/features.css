@@ -23,11 +23,12 @@
 }
 
 .video-container {
-    width: 230px;
-    height: 230px;
+    width: 225px;
+    height: 225px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    margin-left: 15px;
 }
 
 .pedro-keqing-video {
@@ -45,6 +46,7 @@
     position: absolute;
     cursor: pointer;
     z-index: 2;
+    margin-left: 18px;
 }
 
 .date-time-container {
@@ -59,7 +61,7 @@
 
 .date-container {
     background-color: #f7e9fd;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 50%;
     width: 90%;
     display: flex;
@@ -67,15 +69,27 @@
     align-items: center;
     font-weight: bold;
     color: #1e1e1e;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-container #date {
+    transition: transform 0.2s ease-in-out;
+}
+
+.date-container #date:hover {
+    transform: scale(1.1);
 }
 
 .time-container {
     width: 90%;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .time-container ul {
@@ -83,9 +97,15 @@
     display: flex;
     gap: 10px;
     padding: 0;
+    margin: 0;
     color: #303030;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.time-container ul:hover {
+    transform: scale(1.1);
 }
 
 .time-container {
