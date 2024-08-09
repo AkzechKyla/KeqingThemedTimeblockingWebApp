@@ -87,7 +87,7 @@ async function playKeqingPedro() {
         $('#play-btn').click(function(){
           if ($('#play-btn').hasClass("active")){
                 ctrlVideo.play();
-                $('#play-btn').html(`<i id="pause-btn-icon" class="fa-solid fa-pause fa-2x"></i>`);
+                $('#play-btn').html(`<i id="stop-btn-icon" class="fa-solid fa-stop fa-2x"></i>`);
                 $('#play-btn').toggleClass("active");
           } else {
                 ctrlVideo.pause();
