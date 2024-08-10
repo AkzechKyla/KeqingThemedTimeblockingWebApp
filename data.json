@@ -39,9 +39,29 @@
             "line": "Come on. Enough procrastinating. Let's go."
         },
         {
-            "title": "Chat: Delays",
-            "audio": "media/audio/keqing-voiceline1.mp3",
-            "line": "Come on.. Let's go."
+            "title": "Chat: Relax",
+            "audio": "media/audio/keqing-voiceline2.mp3",
+            "line": "I'm all for work-life balance, but I think this is pushing it."
+        },
+        {
+            "title": "Good Morning",
+            "audio": "media/audio/keqing-voiceline3.mp3",
+            "line": "Morning. Time to set the tone for the rest of the day, so if you're still feeling sleepy, shake it off!"
+        },
+        {
+            "title": "Good Afternoon",
+            "audio": "media/audio/keqing-voiceline4.mp3",
+            "line": "I'm not in the habit of napping at noon, but don't let that stop you if you're feeling tired. I'll give you a wake-up call in, say, three minutes' time."
+        },
+        {
+            "title": "Good Evening",
+            "audio": "media/audio/keqing-voiceline5.mp3",
+            "line": "The lights are coming on now that the night is setting in. yawn Another delightful day draws to a close."
+        },
+        {
+            "title": "Good Night",
+            "audio": "media/audio/keqing-voiceline6.mp3",
+            "line": "Sleep well. ...Me? I still have a handful of things on my to-do list, but I'll call it a night once they're done."
         }
     ]
 }
