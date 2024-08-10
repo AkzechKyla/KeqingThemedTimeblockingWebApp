@@ -134,6 +134,7 @@ async function setTime() {
 async function playVoicelines() {
     const keqing = document.getElementById('keqing');
     let voiceline;
+    let thought = document.getElementById('speech-bubble');
 
     keqing.addEventListener('click', function() {
         if (voiceline) {
@@ -143,6 +144,16 @@ async function playVoicelines() {
 
         voiceline = new Audio('./media/audio/keqing-voiceline1.mp3');
         voiceline.play();
+
+        thought.innerHTML = `<div class="thought">Come on. Enough procrastinating. Let's go.</div>`
+
+        voiceline.addEventListener('ended', function() {
+            this.currentTime = 0;
+
+            setTimeout(function() {
+                thought.innerHTML = ``;
+            }, 1000);
+        });
     });
 }
 
