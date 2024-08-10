@@ -131,7 +131,7 @@ async function setTime() {
     }, 1000);
 }
 
-async function playVoicelines() {
+async function playVoicelines(data) {
     const keqing = document.getElementById('keqing');
     let voiceline;
     let thought = document.getElementById('speech-bubble');
@@ -142,12 +142,17 @@ async function playVoicelines() {
             voiceline.currentTime = 0;
         }
 
-        voiceline = new Audio('./media/audio/keqing-voiceline1.mp3');
+        let random = Math.floor(Math.random() * 10);
+        let voicelineLength = Object.keys(data.voicelines).length;
+        let randomVoiceline = random % voicelineLength;
+
+        voiceline = new Audio(data.voicelines[randomVoiceline].audio);
         voiceline.play();
 
         thought.innerHTML = `<div id="thought" class="thought"></div>`;
-        typeWriter("Come on. Enough procrastinating. Let's go.");
+        typeWriter(data.voicelines[randomVoiceline].line);
 
+        // remove speech bubble after voice line is done
         voiceline.addEventListener('ended', function() {
             this.currentTime = 0;
 
@@ -183,7 +188,7 @@ async function main() {
     playKeqingPedro();
     setDate();
     setTime();
-    playVoicelines();
+    playVoicelines(data);
 }
 
 main();
