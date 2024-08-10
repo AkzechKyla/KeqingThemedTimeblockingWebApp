@@ -145,7 +145,8 @@ async function playVoicelines() {
         voiceline = new Audio('./media/audio/keqing-voiceline1.mp3');
         voiceline.play();
 
-        thought.innerHTML = `<div class="thought">Come on. Enough procrastinating. Let's go.</div>`
+        thought.innerHTML = `<div id="thought" class="thought"></div>`;
+        typeWriter("Come on. Enough procrastinating. Let's go.");
 
         voiceline.addEventListener('ended', function() {
             this.currentTime = 0;
@@ -155,6 +156,21 @@ async function playVoicelines() {
             }, 1000);
         });
     });
+}
+
+function typeWriter(textContent) {
+    let speed = 50;
+    let i = 0;
+
+    function type() {
+        if (i < textContent.length) {
+            document.getElementById("thought").innerHTML += textContent.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          }
+    }
+
+    type();
 }
 
 async function main() {
