@@ -85,6 +85,7 @@
 .container {
     position: relative;
     width: 900px;
+    min-width: 500px;
     max-width: 900px;
     overflow: hidden;
     padding-right: 10px;
