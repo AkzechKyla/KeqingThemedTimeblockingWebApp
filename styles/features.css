@@ -119,11 +119,19 @@
 
 .lower-container {
     border-radius: 8px;
-    width: 570px;
-    height: 390px;
+    width: 100%;
+    height: fit-content;
     margin-top: 10px;
     position: relative;
     flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.speech-bubble {
+    width: 50%;
+    min-width: 10%;
+    /* flex: 1; */
 }
 
 .speech-bubble img {
@@ -137,15 +145,12 @@
     /* opacity: 0; */
 }
 
-/* .keqing:active ~ .speech-bubble img {
-    opacity: 1;
-} */
-
 .keqing {
     position: absolute;
     top: -25px;
     right: 0;
     height: 450px;
+    width: 318px;
     cursor: pointer;
     transition: filter 0.15s;
     flex: 1;
@@ -155,7 +160,22 @@
     filter: drop-shadow(3px 3px 5px #9c40ec);
 }
 
+@media (max-width: 1300px) {
+    .keqing {
+        height: 400px;
+        width: 278px;
+    }
+
+    .thought {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 1069px) {
+    .keqing {
+        top: -25px;
+        right: -20px;
+    }
     .upper-container {
         height: 180px;
     }
