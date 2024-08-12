@@ -89,4 +89,5 @@
     max-width: 900px;
     overflow: hidden;
     padding-right: 10px;
+    flex: 2;
 }
