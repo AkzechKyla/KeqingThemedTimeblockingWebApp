@@ -6,13 +6,13 @@
 }
 
 .upper-container {
-    background-color: white;
+    background-color: var(--color-white);
     border-radius: 8px;
     width: fit-content;
     min-width: 100%;
     height: 240px;
     min-height: max-content;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-1);
     position: relative;
     display: flex;
 }
@@ -44,7 +44,7 @@
 
 #play-btn {
     background-color: transparent;
-    color: white;
+    color: var(--color-white);
     border: none;
     position: absolute;
     cursor: pointer;
@@ -64,7 +64,7 @@
 }
 
 .date-container {
-    background-color: #f7e9fd;
+    background-color: var(--color-lightpurple0);
     border-radius: 12px;
     height: 50%;
     width: 90%;
@@ -73,10 +73,10 @@
     align-items: center;
     text-align: center;
     font-weight: bold;
-    color: #1e1e1e;
+    color: var(--color-black0);
     font-weight: 600;
     font-size: 1.2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-1);
 }
 
 .date-container #date {
@@ -94,7 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-1);
 }
 
 .time-container ul {
@@ -103,7 +103,7 @@
     gap: 10px;
     padding: 0;
     margin: 0;
-    color: #303030;
+    color: var(--color-black1);
     font-weight: bold;
     font-size: 2rem;
     transition: transform 0.2s ease-in-out;
@@ -114,7 +114,7 @@
 }
 
 .time-container {
-    background-color: #ead6fc;
+    background-color: var(--color-lightpurple1);
 }
 
 .lower-container {
@@ -157,7 +157,7 @@
 }
 
 .keqing:hover {
-    filter: drop-shadow(3px 3px 5px #9c40ec);
+    filter: drop-shadow(3px 3px 5px var(--color-purple));
 }
 
 @media (max-width: 1300px) {
