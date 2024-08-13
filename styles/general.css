@@ -1,3 +1,18 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-black0: #1e1e1e;
+    --color-black1: #303030;
+    --color-black2: #333;
+    --color-lightpurple0: #f7e9fd;
+    --color-lightpurple1: #ead6fc;
+    --color-grey0: #555;
+    --color-pink0: #ff26a1;
+    --color-purple: #9c40ec;
+    --box-shadow-1: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --default-transition: all 0.4s ease-in-out;
+  }
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
