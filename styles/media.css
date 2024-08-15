@@ -1,0 +1,43 @@
+@media (max-width: 1300px) {
+    .keqing {
+        height: 400px;
+        width: 278px;
+    }
+
+    .thought {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1069px) {
+    .keqing {
+        top: -25px;
+        right: -20px;
+    }
+
+    .upper-container {
+        height: 180px;
+    }
+
+    .video-container {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin-left: 15px;
+    }
+
+    .date-container {
+        height: 40%;
+    }
+
+    .time-container {
+        height: 40%;
+    }
+
+    .time-container ul {
+        font-size: 1.5rem;
+        gap: 2px;
+    }
+}
