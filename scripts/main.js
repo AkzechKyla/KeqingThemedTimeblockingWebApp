@@ -133,10 +133,37 @@ async function setTime() {
 
 async function playVoicelines(data) {
     const keqing = document.getElementById('keqing');
+    const keqing2 = document.getElementById('keqing-night');
     let voiceline;
     let thought = document.getElementById('speech-bubble');
 
-    keqing.addEventListener('click', function() {
+//     keqing.addEventListener('click', function() {
+//         if (voiceline) {
+//             voiceline.pause();
+//             voiceline.currentTime = 0;
+//         }
+//
+//         let random = Math.floor(Math.random() * 10);
+//         let voicelineLength = Object.keys(data.voicelines).length;
+//         let randomVoiceline = random % voicelineLength;
+//
+//         voiceline = new Audio(data.voicelines[randomVoiceline].audio);
+//         voiceline.play();
+//
+//         thought.innerHTML = `<div id="thought" class="thought"></div>`;
+//         typeWriter(data.voicelines[randomVoiceline].line);
+//
+//         // remove speech bubble after voice line is done
+//         voiceline.addEventListener('ended', function() {
+//             this.currentTime = 0;
+//
+//             setTimeout(function() {
+//                 thought.innerHTML = ``;
+//             }, 1000);
+//         });
+//     });
+
+    keqing2.addEventListener('click', function() {
         if (voiceline) {
             voiceline.pause();
             voiceline.currentTime = 0;
