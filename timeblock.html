@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Block Schedule</title>
 
+    <link rel="stylesheet" href="styles/container.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/features.css">
+    <link rel="stylesheet" href="styles/datetime.css">
+    <link rel="stylesheet" href="styles/keqing.css">
+    <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/timeblock.css">
     <link rel="stylesheet" href="styles/thought-bubble.css">
 </head>
@@ -20,11 +23,8 @@
     <div id="right-container" class="right-container">
         <div class="upper-container">
             <div class="pedro-keqing">
-                <button id="play-btn" class="active">
-                    <i id="play-btn-icon" class="fa-solid fa-play fa-2x"></i>
-                </button>
                 <div class="video-container">
-                    <video id="pedro-keqing-video" class="pedro-keqing-video" preload="auto" loop>
+                    <video id="pedro-keqing-video" class="pedro-keqing-video" preload="auto" loop autoplay muted>
                         <source src="media/videos/pedro-keqing.mp4">
                     </video>
                 </div>
@@ -46,7 +46,8 @@
         </div>
         <div class="lower-container">
             <div id="speech-bubble" class="speech-bubble"></div>
-            <img id="keqing" class="keqing" src="media/img/keqing-cat.png">
+            <!-- <img id="keqing" class="keqing" src="media/img/keqing-cat.png"> -->
+            <img id="keqing-night" class="keqing" src="media/img/keqing-night.png">
         </div>
     </div>
 

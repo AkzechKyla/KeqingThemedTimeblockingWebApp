@@ -1,0 +1,45 @@
+.pedro-keqing {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pedro-keqing-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+/* #play-btn {
+    background-color: transparent;
+    color: var(--color-white);
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin-left: 18px;
+} */
+
+.keqing {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    height: 450px;
+    width: 318px;
+    cursor: pointer;
+    transition: filter 0.15s;
+    flex: 1;
+}
+
+#keqing-night {
+    height: 450px;
+    width: 295px;
+}
+
+.keqing:hover {
+    filter: drop-shadow(0px 0px 5px var(--color-purple));
+}
