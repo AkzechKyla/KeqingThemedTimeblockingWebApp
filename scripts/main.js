@@ -212,7 +212,7 @@ async function main() {
     generateHourIndicators(data);
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
-    playKeqingPedro();
+    // playKeqingPedro();
     setDate();
     setTime();
     playVoicelines(data);
