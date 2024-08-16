@@ -1,18 +1,22 @@
-.schedule {
+#schedule {
     display: flex;
     flex-direction: column;
     position: relative;
     max-width: 900px;
     padding: 20px 10px;
-    /* background-color: var(--color-white); */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-daymode {
+    background-color: var(--color-white);
+}
+
+.schedule-nightmode {
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 1px );
     -webkit-backdrop-filter: blur( 1px );
-    border-radius: 10px;
-
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hour-indicators {
@@ -23,7 +27,6 @@
     position: absolute;
     z-index: 1;
     padding: 20px 10px;
-    /* margin-top: 5px; */
     margin-left: 5px;
 }
 
@@ -32,8 +35,7 @@
     line-height: 5px;
     text-align: right;
     font-size: 14px;
-    /* color: var(--color-grey0); */
-    color: var(--color-white);
+    color: var(--color-grey0);
     padding-bottom: 10px;
 }
 
@@ -52,33 +54,45 @@
 }
 
 .block:nth-child(odd) {
-    background: rgba( 140, 74, 175, 0.2 );
-    /* box-shadow: 0 8px 30px 0 rgba(255, 255, 255, 0.2); */
+    background-color: var(--color-lightpurple0);
+}
+
+.block-nightmode:nth-child(odd) {
+    background: rgba(140, 74, 175, 0.2);
     box-shadow: var(--box-shadow-1);
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
-    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 }
 
 .block:nth-child(even) {
-    background-color: #251039;
+    background-color: var(--color-lightpurple1);
+}
+
+.block-nightmode:nth-child(even) {
+    background-color: var(--color-darkpurple);
 }
 
 .time {
     font-size: 14px;
-    /* color: var(--color-grey0); */
-    color: rgb(231, 225, 225);
+    color: var(--color-grey0);
     font-weight: bold;
+}
+
+.time-nightmode {
+    color: rgb(231, 225, 225);
 }
 
 .description {
     font-size: 16px;
     margin-left: 10px;
-    /* color: var(--color-black2); */
-    color: white;
+    color: var(--color-black2);
     overflow: hidden; /* Hide overflowing text */
     white-space: nowrap; /* Prevent wrapping */
     text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.description-nightmode {
+    color: var(--color-white);
 }
 
 .indicator {

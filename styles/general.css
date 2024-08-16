@@ -4,11 +4,14 @@
     --color-black0: #1e1e1e;
     --color-black1: #303030;
     --color-black2: #333;
-    --color-lightpurple0: #8c4aaf;
-    --color-lightpurple1: #4A215D;
+    --color-lightpurple0: #f7e9fd;
+    --color-lightpurple1: #ead6fc;
+    --color-darkpurple: #251039;
     --color-grey0: #555;
     --color-pink0: #ff26a1;
     --color-purple: #9c40ec;
+    --color-purple1: #8c4aaf;
+    --color-purple2: #4A215D;
     --box-shadow-1: 0 4px 8px rgba(0, 0, 0, 0.1);
     --default-transition: all 0.4s ease-in-out;
   }
@@ -18,7 +21,7 @@ body {
     margin: 0;
     padding-left: 30px;
     padding-right: 30px;
-    background-image: url('../media/img/starry-purple-night-sky.png');
+    background-image: url('../media/img/Pastel-Purple-Ombre-Background.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

@@ -9,14 +9,7 @@
     width: fit-content;
 }
 
-.date-container {
-    /* background-color: var(--color-lightpurple0); */
-    background: rgba( 140, 74, 175, 0.2 );
-    /* box-shadow: 0 8px 30px 0 rgba(255, 255, 255, 0.2); */
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
-    border-radius: 10px;
-
+#date-container {
     border-radius: 12px;
     height: 50%;
     width: 90%;
@@ -25,22 +18,33 @@
     align-items: center;
     text-align: center;
     font-weight: bold;
-    /* color: var(--color-black0); */
-    color: white;
     font-weight: 600;
     font-size: 1.2rem;
     box-shadow: var(--box-shadow-1);
 }
 
-.date-container #date {
+.date-container-daymode {
+    background-color: var(--color-lightpurple0);
+    color: var(--color-black0);
+}
+
+.date-container-nightmode {
+    background: rgba(140, 74, 175, 0.2);
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
+    color: white;
+}
+
+#date-container #date {
     transition: transform 0.2s ease-in-out;
 }
 
-.date-container #date:hover {
+#date-container #date:hover {
     transform: scale(1.1);
 }
 
-.time-container {
+#time-container {
     width: 90%;
     height: 50%;
     border-radius: 12px;
@@ -50,24 +54,30 @@
     box-shadow: var(--box-shadow-1);
 }
 
-.time-container ul {
+.time-container-daymode {
+    background-color: var(--color-lightpurple1);
+}
+
+.time-container-nightmode {
+    background-color: var(--color-darkpurple);
+}
+
+#time-container ul {
     list-style-type: none;
     display: flex;
     gap: 10px;
     padding: 0;
     margin: 0;
-    /* color: var(--color-black1); */
-    color: white;
+    color: var(--color-black1);
     font-weight: bold;
     font-size: 2rem;
     transition: transform 0.2s ease-in-out;
 }
 
-.time-container ul:hover {
-    transform: scale(1.1);
+#time-container.time-container-nightmode ul {
+    color: var(--color-white);
 }
 
-.time-container {
-    /* background-color: var(--color-lightpurple1); */
-    background-color: #251039;
+#time-container ul:hover {
+    transform: scale(1.1);
 }

@@ -15,7 +15,7 @@
         right: -20px;
     }
 
-    .upper-container {
+    #upper-container {
         height: 180px;
     }
 
@@ -28,15 +28,16 @@
         margin-left: 15px;
     }
 
-    .date-container {
+    #date-container {
+        height: 40%;
+        font-size: 1.1rem;
+    }
+
+    #time-container {
         height: 40%;
     }
 
-    .time-container {
-        height: 40%;
-    }
-
-    .time-container ul {
+    #time-container ul {
         font-size: 1.5rem;
         gap: 2px;
     }

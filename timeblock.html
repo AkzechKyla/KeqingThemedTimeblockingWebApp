@@ -16,12 +16,12 @@
 <body>
     <div id="container" class="container">
         <div id="hour-indicators" class="hour-indicators"></div>
-        <div id="schedule" class="schedule"></div>
+        <div id="schedule" class="schedule-daymode"></div>
         <div id="indicator" class="indicator"></div>
     </div>
 
     <div id="right-container" class="right-container">
-        <div class="upper-container">
+        <div id="upper-container" class="upper-container-daymode">
             <div class="pedro-keqing">
                 <div class="video-container">
                     <video id="pedro-keqing-video" class="pedro-keqing-video" preload="auto" loop autoplay muted>
@@ -30,10 +30,10 @@
                 </div>
             </div>
             <div class="date-time-container">
-                <div class="date-container">
+                <div id="date-container" class="date-container-daymode">
                     <div id="date"></div>
                 </div>
-                <div class="time-container">
+                <div id="time-container" class="time-container-daymode">
                     <ul>
                         <li id="hours">05</li>
                         <li id="point">:</li>
@@ -46,7 +46,7 @@
         </div>
         <div class="lower-container">
             <div id="speech-bubble" class="speech-bubble"></div>
-            <!-- <img id="keqing" class="keqing" src="media/img/keqing-cat.png"> -->
+            <img id="keqing-day" class="keqing" src="media/img/keqing-cat.png">
             <img id="keqing-night" class="keqing" src="media/img/keqing-night.png">
         </div>
     </div>
