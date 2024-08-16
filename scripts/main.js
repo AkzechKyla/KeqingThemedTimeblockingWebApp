@@ -188,6 +188,28 @@ async function setToNightMode() {
     if (currentHour > 17) {
         document.body.style.backgroundImage = "url('../media/img/starry-purple-night-sky.png')";
 
+        document.getElementById("schedule").classList.toggle("schedule-nightmode");
+
+        const hours = document.querySelectorAll(".hour");
+        hours.forEach(hour => {
+            hour.style.color = `var(--color-white)`;
+        });
+
+        const blocks = document.querySelectorAll(".block");
+        blocks.forEach(block => {
+            block.classList.toggle('block-nightmode');
+        });
+
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach(description => {
+            description.classList.toggle("description-nightmode");
+        });
+
+        const timeElements = document.querySelectorAll(".time");
+        timeElements.forEach(time => {
+            time.classList.toggle("time-nightmode");
+        });
+
         document.getElementById("keqing-day").style.display = "none";
         document.getElementById("keqing-night").style.display = "block";
 
