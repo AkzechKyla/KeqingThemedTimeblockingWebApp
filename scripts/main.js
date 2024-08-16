@@ -143,15 +143,26 @@ async function playVoicelines(data) {
                 voiceline.currentTime = 0;
             }
 
-            let random = Math.floor(Math.random() * 10);
-            let voicelineLength = Object.keys(data.voicelines).length;
-            let randomVoiceline = random % voicelineLength;
+            let currentTime = new Date();
+            let currentHour = currentTime.getHours();
+            let selectedVoiceline;
 
-            voiceline = new Audio(data.voicelines[randomVoiceline].audio);
+            if (currentHour >= 4 && currentHour < 12) { // Morning: 4AM - 11AM
+                const morningVoicelines = [0, 1, 2];
+                selectedVoiceline = morningVoicelines[Math.floor(Math.random() * morningVoicelines.length)];
+            } else if (currentHour >= 12 && currentHour < 18) { // Afternoon: 12PM - 5PM
+                const afternoonVoicelines = [0, 1, 3];
+                selectedVoiceline = afternoonVoicelines[Math.floor(Math.random() * afternoonVoicelines.length)];
+            } else if (currentHour >= 18 && currentHour < 24) { // Evening: 6PM - 12AM
+                const eveningVoicelines = [0, 1, 4, 5];
+                selectedVoiceline = eveningVoicelines[Math.floor(Math.random() * eveningVoicelines.length)];
+            }
+
+            voiceline = new Audio(data.voicelines[selectedVoiceline].audio);
             voiceline.play();
 
             thought.innerHTML = `<div id="thought" class="thought"></div>`;
-            typeWriter(data.voicelines[randomVoiceline].line);
+            typeWriter(data.voicelines[selectedVoiceline].line);
 
             // remove speech bubble after voice line is done
             voiceline.addEventListener('ended', function() {
@@ -209,6 +220,8 @@ async function setToNightMode() {
         timeElements.forEach(time => {
             time.classList.toggle("time-nightmode");
         });
+
+        document.querySelector(".indicator").classList.toggle("indicator-nightmode");
 
         document.getElementById("keqing-day").style.display = "none";
         document.getElementById("keqing-night").style.display = "block";
