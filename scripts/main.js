@@ -132,60 +132,35 @@ async function setTime() {
 }
 
 async function playVoicelines(data) {
-    const keqing = document.getElementById('keqing');
-    const keqing2 = document.getElementById('keqing-night');
+    const keqingElements = document.getElementsByClassName('keqing');
     let voiceline;
     let thought = document.getElementById('speech-bubble');
 
-//     keqing.addEventListener('click', function() {
-//         if (voiceline) {
-//             voiceline.pause();
-//             voiceline.currentTime = 0;
-//         }
-//
-//         let random = Math.floor(Math.random() * 10);
-//         let voicelineLength = Object.keys(data.voicelines).length;
-//         let randomVoiceline = random % voicelineLength;
-//
-//         voiceline = new Audio(data.voicelines[randomVoiceline].audio);
-//         voiceline.play();
-//
-//         thought.innerHTML = `<div id="thought" class="thought"></div>`;
-//         typeWriter(data.voicelines[randomVoiceline].line);
-//
-//         // remove speech bubble after voice line is done
-//         voiceline.addEventListener('ended', function() {
-//             this.currentTime = 0;
-//
-//             setTimeout(function() {
-//                 thought.innerHTML = ``;
-//             }, 1000);
-//         });
-//     });
+    Array.from(keqingElements).forEach(keqing => {
+        keqing.addEventListener('click', function() {
+            if (voiceline) {
+                voiceline.pause();
+                voiceline.currentTime = 0;
+            }
 
-    keqing2.addEventListener('click', function() {
-        if (voiceline) {
-            voiceline.pause();
-            voiceline.currentTime = 0;
-        }
+            let random = Math.floor(Math.random() * 10);
+            let voicelineLength = Object.keys(data.voicelines).length;
+            let randomVoiceline = random % voicelineLength;
 
-        let random = Math.floor(Math.random() * 10);
-        let voicelineLength = Object.keys(data.voicelines).length;
-        let randomVoiceline = random % voicelineLength;
+            voiceline = new Audio(data.voicelines[randomVoiceline].audio);
+            voiceline.play();
 
-        voiceline = new Audio(data.voicelines[randomVoiceline].audio);
-        voiceline.play();
+            thought.innerHTML = `<div id="thought" class="thought"></div>`;
+            typeWriter(data.voicelines[randomVoiceline].line);
 
-        thought.innerHTML = `<div id="thought" class="thought"></div>`;
-        typeWriter(data.voicelines[randomVoiceline].line);
+            // remove speech bubble after voice line is done
+            voiceline.addEventListener('ended', function() {
+                this.currentTime = 0;
 
-        // remove speech bubble after voice line is done
-        voiceline.addEventListener('ended', function() {
-            this.currentTime = 0;
-
-            setTimeout(function() {
-                thought.innerHTML = ``;
-            }, 1000);
+                setTimeout(function() {
+                    thought.innerHTML = ``;
+                }, 1000);
+            });
         });
     });
 }
@@ -205,6 +180,17 @@ function typeWriter(textContent) {
     type();
 }
 
+async function setToNightMode() {
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+
+    /* 6PM onwards */
+    if (currentHour > 17) {
+        document.getElementById("keqing-day").style.display = "none";
+        document.getElementById("keqing-night").style.display = "block";
+    }
+}
+
 async function main() {
     const response = await fetch('data.json');
     const data = await response.json();
@@ -216,6 +202,7 @@ async function main() {
     setDate();
     setTime();
     playVoicelines(data);
+    setToNightMode();
 }
 
 main();

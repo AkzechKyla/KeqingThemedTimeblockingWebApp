@@ -35,9 +35,14 @@
     flex: 1;
 }
 
+#keqing-day {
+    display: block;
+}
+
 #keqing-night {
     height: 450px;
     width: 295px;
+    display: none;
 }
 
 .keqing:hover {
