@@ -185,7 +185,9 @@ async function setToNightMode() {
     let currentHour = currentTime.getHours();
 
     /* 6PM onwards */
-    if (currentHour < 17) {
+    if (currentHour > 17) {
+        document.body.style.backgroundImage = "url('../media/img/starry-purple-night-sky.png')";
+
         document.getElementById("keqing-day").style.display = "none";
         document.getElementById("keqing-night").style.display = "block";
 
