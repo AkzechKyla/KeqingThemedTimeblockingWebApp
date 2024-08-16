@@ -59,7 +59,7 @@
 }
 
 .time-container-nightmode {
-    background-color: #251039;
+    background-color: var(--color-darkpurple);
 }
 
 #time-container ul {
