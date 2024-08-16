@@ -210,6 +210,8 @@ async function setToNightMode() {
             time.classList.toggle("time-nightmode");
         });
 
+        document.querySelector(".indicator").classList.toggle("indicator-nightmode");
+
         document.getElementById("keqing-day").style.display = "none";
         document.getElementById("keqing-night").style.display = "block";
 
