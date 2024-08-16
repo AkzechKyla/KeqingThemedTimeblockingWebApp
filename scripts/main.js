@@ -185,9 +185,18 @@ async function setToNightMode() {
     let currentHour = currentTime.getHours();
 
     /* 6PM onwards */
-    if (currentHour > 17) {
+    if (currentHour < 17) {
         document.getElementById("keqing-day").style.display = "none";
         document.getElementById("keqing-night").style.display = "block";
+
+        const upperContainer = document.getElementById("upper-container");
+        upperContainer.classList.toggle("upper-container-nightmode");
+
+        const dateContainer = document.getElementById("date-container");
+        dateContainer.classList.toggle("date-container-nightmode");
+
+        const timeContainer = document.getElementById("time-container");
+        timeContainer.classList.toggle("time-container-nightmode");
     }
 }
 
