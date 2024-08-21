@@ -135,9 +135,14 @@ async function playVoicelines(data) {
     const keqingElements = document.getElementsByClassName('keqing');
     let voiceline;
     let thought = document.getElementById('speech-bubble');
+    let isPlaying = false;
 
     Array.from(keqingElements).forEach(keqing => {
         keqing.addEventListener('click', function() {
+            if (isPlaying) return;
+
+            isPlaying = true;
+
             if (voiceline) {
                 voiceline.pause();
                 voiceline.currentTime = 0;
@@ -167,10 +172,8 @@ async function playVoicelines(data) {
             // remove speech bubble after voice line is done
             voiceline.addEventListener('ended', function() {
                 this.currentTime = 0;
-
-                setTimeout(function() {
-                    thought.innerHTML = ``;
-                }, 1000);
+                thought.innerHTML = ``;
+                isPlaying = false;
             });
         });
     });
