@@ -13,6 +13,8 @@
     flex-direction: column;
     position: relative;
     min-width: 42%;
+    transform: scale(0.8);
+    transform-origin: 0px 0px;
 }
 
 /* upper-right */

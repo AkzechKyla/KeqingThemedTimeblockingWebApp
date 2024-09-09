@@ -17,18 +17,17 @@
   }
 
 body {
+    --padding: 10px;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: var(--padding);
     background-image: url('../media/img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     display: flex;
-    max-width: 720px;
-    max-height: 405px;
-    transform: scale(0.9);
-    transform-origin: 0 0;
+    width: calc(800px - var(--padding) * 2);
+    height: 550px;
 }
 
 h1 {
