@@ -26,8 +26,7 @@
 
 .keqing {
     position: relative;
-    top: -25px;
-    right: 0;
+    transform: translateY(11%);
     width: 318px;
     cursor: pointer;
     transition: filter 0.15s;
