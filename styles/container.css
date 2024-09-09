@@ -12,9 +12,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 120%;
     min-width: 42%;
-    transform: scale(0.8);
+    transform: scale(0.825);
     transform-origin: 0px 0px;
+    justify-content: space-between;
 }
 
 /* upper-right */
@@ -57,9 +59,7 @@
     border-radius: 8px;
     width: 100%;
     height: fit-content;
-    margin-top: 10px;
     position: relative;
-    flex: 1;
     display: flex;
     justify-content: space-between;
 }

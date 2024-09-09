@@ -25,10 +25,9 @@
 } */
 
 .keqing {
-    position: absolute;
+    position: relative;
     top: -25px;
     right: 0;
-    height: 450px;
     width: 318px;
     cursor: pointer;
     transition: filter 0.15s;
@@ -40,7 +39,6 @@
 }
 
 #keqing-night {
-    height: 450px;
     width: 295px;
     display: none;
 }

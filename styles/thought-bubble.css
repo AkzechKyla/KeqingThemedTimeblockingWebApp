@@ -47,10 +47,8 @@
                -5px 25px 0 -10px var(--color-white);
 }
 
-/* few modifications on the code */
 .speech-bubble {
-    width: 50%;
-    min-width: 10%;
+    position: absolute;
 }
 
 .speech-bubble img {
