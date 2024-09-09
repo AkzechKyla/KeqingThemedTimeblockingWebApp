@@ -241,6 +241,10 @@ async function setToNightMode() {
 }
 
 async function main() {
+    setDate();
+    setTime();
+    setToNightMode();
+
     const response = await fetch('data.json');
     const data = {
         ...(await response.json()),
@@ -250,11 +254,7 @@ async function main() {
     generateHourIndicators(data);
     generateSchedule(data);
     setInterval(updateIndicator, 60000); // Update the indicator every minute
-    // playKeqingPedro();
-    setDate();
-    setTime();
     playVoicelines(data);
-    setToNightMode();
 }
 
 main();
