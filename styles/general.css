@@ -24,10 +24,13 @@ body {
     background-image: url('../media/img/Pastel-Purple-Ombre-Background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     overflow: hidden;
     padding-top: 70px;
     display: flex;
+    max-width: 720px;
+    max-height: 405px;
+    transform: scale(0.9);
+    transform-origin: 0 0;
 }
 
 h1 {
