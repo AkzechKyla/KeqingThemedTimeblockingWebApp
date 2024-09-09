@@ -242,7 +242,10 @@ async function setToNightMode() {
 
 async function main() {
     const response = await fetch('data.json');
-    const data = await response.json();
+    const data = {
+        ...(await response.json()),
+        ...(await fetchRealData())
+    };
 
     generateHourIndicators(data);
     generateSchedule(data);
