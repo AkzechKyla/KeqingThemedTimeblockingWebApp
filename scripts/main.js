@@ -77,7 +77,7 @@ function updateIndicator(data) {
         startHour = blockEndHour;
     });
 
-    indicator.style.transform = `translateY(${indicatorPosition + 10}px)`;
+    indicator.style.transform = `translateY(${indicatorPosition + 18.5}px)`;
 }
 
 async function playKeqingPedro() {
