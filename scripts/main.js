@@ -200,7 +200,7 @@ async function setToNightMode() {
 
     /* 6PM onwards */
     if (currentHour > 17) {
-        document.body.style.backgroundImage = "url('../media/img/starry-purple-night-sky.png')";
+        document.body.style.backgroundImage = "url('media/img/starry-purple-night-sky.png')";
 
         document.getElementById("schedule").classList.toggle("schedule-nightmode");
 
